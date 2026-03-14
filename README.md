@@ -1,4 +1,4 @@
-STM32F407 HD44780 LCD Driver (4-Bit Mode)
+#STM32F407 HD44780 LCD Driver (4-Bit Mode)
 
 A custom, bare-metal C driver for the Hitachi HD44780U (and compatible) 16x2 Dot Matrix LCD. This project demonstrates low-level peripheral interfacing using the Motorola 6800-series parallel protocol on an STM32F407 Discovery board.
 🚀 Key Features
