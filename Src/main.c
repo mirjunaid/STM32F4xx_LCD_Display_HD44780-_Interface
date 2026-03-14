@@ -34,13 +34,13 @@ int main(void)
 	{
 		LCDPrintString("HD44780 LCD INTF");
 		LCDSetCursor(2, 1);
-		LCDPrintString("MOTOROLA 6800 SI");
-		delay(1000000);
+		LCDPrintString("MOTOROLA 6800 SP");
+		delay(10000000);
 		LCDDisplayClear();
 		LCDPrintString("STM32 + HD44780 ");
 		LCDSetCursor(2, 1);
 		LCDPrintString("LCD INTF PROJECT");
-		delay(1000000);
+		delay(10000000);
 		LCDDisplayClear();
 	}
 

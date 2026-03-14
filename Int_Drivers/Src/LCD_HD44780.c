@@ -148,15 +148,21 @@ static void LCDEnable(void)
 	GPIO_WriteToOutputPin(LCD_GPIO_PORT, LCD_GPIO_EN, GPIO_PIN_RESET);
 	udelay(50);
 }
+// Simplified Software Delays
+void udelay(uint32_t cnt)
+{
+    // Adjust the multiplier based on your CPU frequency
+    // For a 16MHz clock, roughly 10-15 iterations is 1 microsecond
+    // For 168MHz, it will be much higher
+    for(uint32_t i = 0; i < (cnt * 100); i++);
+}
 
 void mdelay(uint32_t cnt)
 {
-	for(uint32_t i = 0; i < (cnt * 1000); i++);
-}
-
-void udelay(uint32_t cnt)
-{
-	for(uint32_t i = 0; i < (cnt * 1000); i++);
+    for(uint32_t i = 0; i < (cnt * 100); i++)
+    {
+        udelay(1); // Call microsecond delay 1000 times
+    }
 }
 
 void LCDDisplayReturnHome(void)
